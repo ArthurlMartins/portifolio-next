@@ -1,0 +1,22 @@
+.navLink {
+    position: relative;
+    padding-bottom: 10px; /* Ajusta o espaço para a linha animada */
+    text-decoration: none;
+    color: #000; /* Cor do texto */
+    transition: color 0.3s ease;
+  }
+  
+  .navLink::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Ajusta a posição da linha */
+    width: 0;
+    height: 2px;
+    background-color: #000; /* Cor da linha */
+    transition: width 0.3s ease;
+  }
+  
+  .navLink:hover::after {
+    width: 100%;
+  }

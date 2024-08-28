@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/ui/header";
+import Footer from "@/components/ui/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +17,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html>
+      <head>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+          />
+      </head>
+      <body className="bg-gray-50">
+        <Header />
+          <main>{children}</main>
+        {/* <Footer /> */}
+        <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+      </body>
     </html>
   );
 }
