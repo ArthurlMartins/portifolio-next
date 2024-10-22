@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -15,6 +19,7 @@
     --secondary-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 45%;
+    --muted-foreground-white: 240 3.8% 75%;
     --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 72% 51%;
@@ -24,16 +29,6 @@
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    
-  }
-}
-
-
-
-
 
 
 body {
@@ -59,7 +54,8 @@ body {
   left: 0;
   bottom: -7px;
   width: 0;
-  height: 2px;
+  height: 3.5px;
+  border-radius: 100px;
   background-color:#FF873D; /* Cor da linha */
   transition: width 0.4s ease;
 }

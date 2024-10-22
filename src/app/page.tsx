@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Hero from '../components/hero-home'
+import Hero from '../components/hero'
 import About from "@/components/about";
 import Projects from "@/components/projects";
-import Work from "@/components/work";
 import Contact from "@/components/contact";
 import Footer from "@/components/ui/footer";
+import Skills from "@/components/skills";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
         <Hero />
         <About />
         <Projects />
-        <Work />
+        <Skills />
         <Contact />
         <Footer />
       </>

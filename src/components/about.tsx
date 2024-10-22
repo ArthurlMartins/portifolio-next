@@ -9,19 +9,19 @@ export default function About() {
     const [isAnimating, setIsAnimating] = useState(false);
     const slides = [
         {
-            image: '/images/cat1.jpeg',
+            image: '/images/me.jpeg',
             subtitle: 'Quem eu sou?',
-            text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore quasi, quas accusantium blanditiis ipsam, nulla nihil cum corrupti incidunt necessitatibus animi eos iusto minus architecto voluptatem voluptatibus dignissimos doloribus quia!',
+            text: 'Olá, eu sou o Arthur, um desenvolvedor front-end apaixonado por tecnologia e inovação. Minha jornada começou com Java e desenvolvimento de jogos, e desde então, me encontrei no desenvolvimento web.',
         },
         {
             image: '/images/cat2.jpeg',
-            subtitle: 'Olá mundo!',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, natus. Officia saepe esse ipsum provident in sunt culpa aliquam nesciunt animi repellendus repellat ad nisi minus laudantium, quis molestiae ab?',
+            subtitle: 'Objetivo',
+            text: 'Atualmente, trabalho principalmente com React.js, que é a minha especialidade, e estou explorando o universo do Next.js para expandir minhas habilidades. Sou técnico em informática para internet certificado pelo SENAC RS, o que reforça meu comprometimento com a qualidade e o aprendizado contínuo.',
         },
         {
             image: '/images/cat3.jpg',
-            subtitle: 'De onde eu vim?',
-            text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum ad officia dolorum velit minima incidunt consequuntur, at iure placeat harum itaque ipsam eius iusto aliquid voluptate reprehenderit? Odio, voluptatibus saepe.',
+            subtitle: 'Motivação',
+            text: 'Gosto de trabalhar em projetos desafiadores, onde posso colaborar com equipes criativas e aprender continuamente. O que mais me motiva é a sensação de completar algo em que dediquei bastante tempo e esforço, vendo o resultado final ganhar vida na tela.',
         },
     ];
 
@@ -42,14 +42,14 @@ export default function About() {
     };
 
     return (
-        <section className="">
+        <section id='about' className="pt-32">
             <div className="mx-auto max-w-6xl px-4 sm:px-6">
-                <div className="text-black items-center gap-24 flex justify-center container pb-32 mb-32 pt-32 md:pb-20 md:pt-60">
+                <div className="text-black items-center gap-24 flex justify-center container">
                         <div className="relative md:container items-center item lg:flex-row flex-col flex rounded-lg md:h-96">
-                            <div className={`lg:w-1/2 h-full transition-all duration-500 ease-in-out transform ${isAnimating ? 'opacity-0 -translate-x-4' : 'opacity-100 translate-x-0'}`}>
+                            <div className={`lg:w-1/2 h-full lg:order-last transition-all duration-500 ease-in-out transform ${isAnimating ? 'opacity-0 -translate-x-4' : 'opacity-100 translate-x-0'}`}>
                                 <Image
-                                    width={350}
-                                    height={400}
+                                    width="550"
+                                    height="400"
                                     src={slides[currentSlide].image}
                                     className="h-full object-cover rounded-lg"
                                     alt={`Slide ${currentSlide + 1}`}
@@ -65,19 +65,19 @@ export default function About() {
                                 </button>
                                 <button
                                     type="button"
-                                    className="md:absolute ml-40 md:ml-0 top-0 right-0 flex items-center justify-center h-full px-4 cursor-pointer group"
+                                    className="md:absolute ml-80 md:ml-0 top-0 right-0 flex items-center justify-center h-full px-4 cursor-pointer group"
                                     onClick={handleNext}
                                 >
                                     <Arrow direction="right" />
                                 </button>
-                            </div>  
+                            </div> 
                             <div className={`lg:w-1/2 text-left lg:text-left lg:pt-0 pt-6 px-6 flex-col transition-all duration-500 ease-in-out transform ${isAnimating ? 'opacity-0 translate-x-4' : 'opacity-100 translate-x-0'}`}>
                                 <div>
-                                    <p className='text-7xl font-bold'>About Me</p>
+                                    <p className='text-7xl tracking-tighter font-bold'>About Me</p>
                                     <p className='text-xl'>{slides[currentSlide].subtitle}</p>
                                 </div>
                                 <div className="">
-                                    <p className="text-lg text-gray-700 pt-8">
+                                    <p className="text-base text-muted-foreground text-gray-700 pt-8">
                                         {slides[currentSlide].text}
                                     </p>
                                 </div>

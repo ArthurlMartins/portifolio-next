@@ -1,11 +1,13 @@
 import Image from "next/image"
+import Link from "next/link"
+
 
 export default function Forms() {
 
     return (
-        <div className="bg-orange-500 shadow-slate-800 shadow-square mb-32 flex flex-col justify-between w-80 h-410 rounded-2xl">
+        <div className="bg-slate-800 flex flex-col justify-between w-80 h-410 rounded-xl">
             <div>
-                <p className="text-center text-2xl font-bold text-white pt-4 pb-4">Contact</p>  
+                <p className="text-center text-2xl font-bold text-white pt-6 pb-4">Contact</p>  
                 <div>
                     <div className="flex flex-col mb-4 items-center">
                         <div>
@@ -17,7 +19,7 @@ export default function Forms() {
                             </label>
                             <input
                             id="name"
-                            className="form-input w-64 p-2 rounded-xl py-2"
+                            className="form-input w-64 p-3 rounded-xl py-2"
                             type="text"
                             placeholder="Gustavo Guanabara"
                             required
@@ -34,7 +36,7 @@ export default function Forms() {
                             </label>
                             <input
                             id="name"
-                            className="form-input w-64 p-2 rounded-xl py-2"
+                            className="form-input w-64 p-3 rounded-xl py-2"
                             type="text"
                             placeholder="gustavo@gmail.com"
                             required
@@ -51,7 +53,7 @@ export default function Forms() {
                             </label>
                             <textarea
                             id="name"
-                            className="form-input w-64 p-2 rounded-xl py-2"
+                            className="form-input w-64 p-3 rounded-xl py-2"
                             placeholder="Gustavo Guanabara"
                             required
                             style={{}}
@@ -61,7 +63,13 @@ export default function Forms() {
                 </div>          
             </div>
             <div className="w-full flex justify-center">
-                <button className="bg-white rounded-full w-32 h-12 mb-4">Send</button>    
+            <Link
+            href="#"
+            className="h-9 mb-6 rounded-md bg-orange-500 px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            prefetch={false}
+            >
+            See more
+            </Link>   
             </div>  
             
         </div>
